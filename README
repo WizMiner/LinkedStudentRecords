@@ -1,0 +1,132 @@
+# Student Management System
+
+## Project Overview
+The **Student Management System** is a simple C++ application that uses a singly linked list to store and manage student data. The program allows users to:
+
+- Add student records at the beginning or end of the list.
+- Display student records in forward or reverse order.
+
+This project demonstrates fundamental concepts of linked lists, dynamic memory management, and recursion in C++.
+
+---
+
+## Features
+1. **Add Student Records**:
+   - Add a student node at the beginning of the list.
+   - Add a student node at the end of the list.
+2. **Display Student Records**:
+   - Display all student records in the order they were added.
+   - Display all student records in reverse order using recursion.
+3. **Memory Management**:
+   - Ensures proper cleanup of dynamically allocated memory upon program exit.
+
+---
+
+## How It Works
+The program maintains a singly linked list where each node represents a student. Each node contains the following data:
+- Name
+- ID
+- Age
+
+### Core Functionalities
+- **Adding Nodes**:
+  - Nodes can be inserted at the beginning or at the end of the list.
+- **Displaying Nodes**:
+  - Forward display iterates through the list normally.
+  - Backward display uses recursion to navigate to the end of the list before printing data.
+- **Dynamic Memory**:
+  - Nodes are dynamically allocated and deallocated to prevent memory leaks.
+
+---
+
+## Usage
+1. Compile the code using a C++ compiler, such as `g++`:
+   ```bash
+   g++ main.cpp -o StudentManagementSystem
+   ```
+
+2. Run the compiled program:
+   ```bash
+   ./StudentManagementSystem
+   ```
+
+3. Follow the menu options to:
+   - Add a student at the beginning or end of the list.
+   - Display student data in forward or reverse order.
+
+4. Exit the program by choosing the appropriate menu option.
+
+---
+
+## Menu Options
+- **1**: Add a student at the beginning of the list.
+- **2**: Add a student at the end of the list.
+- **3**: Display all students (forward order).
+- **4**: Display all students (reverse order).
+- **0**: Exit the program.
+
+---
+
+## Example Interaction
+```
+Menu:
+1. Add a student at the beginning
+2. Add a student at the end
+3. Display all students (Forward)
+4. Display all students (Backward)
+0. Exit
+
+Please enter your choice: 1
+Please enter your name: John
+Please enter your ID: 101
+Please enter your age: 20
+
+Menu:
+1. Add a student at the beginning
+2. Add a student at the end
+3. Display all students (Forward)
+4. Display all students (Backward)
+0. Exit
+
+Please enter your choice: 3
+Student information (Forward):
+John, 101, 20
+
+Menu:
+1. Add a student at the beginning
+2. Add a student at the end
+3. Display all students (Forward)
+4. Display all students (Backward)
+0. Exit
+
+Please enter your choice: 4
+Student information (Backward):
+John, 101, 20
+
+Exiting the program...
+Memory cleaned up. Exiting program.
+```
+
+---
+
+## Future Enhancements
+- Add functionality to delete a specific student record.
+- Implement search and update operations for student data.
+- Store and retrieve student data from a file for persistence.
+
+---
+
+## Requirements
+- A C++ compiler (e.g., g++, clang++)
+- Basic understanding of C++ programming.
+
+---
+
+## Author
+Developed as a demonstration of linked list implementation in C++.
+
+---
+
+## License
+This project is open-source and available for educational purposes.
+
