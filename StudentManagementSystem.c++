@@ -52,7 +52,51 @@ void add_at_end() {
     }
 }
 
+// Function to display the list forwards
+void display_fwd() {
+    if (start == NULL) { // If the list is empty
+        cout << "The list is empty; no student data to display." << endl;
+        return;
+    }
 
+    cout << "Student information (Forward):" << endl;
+    student* temp = start;
+    while (temp != NULL) {
+        cout << temp->name << ", " << temp->id << ", " << temp->age << endl;
+        temp = temp->nxt;
+    }
+}
+
+// Recursive function to display the list backwards
+void display_bwd_rec(student* node) {
+    if (node == NULL) {
+        return; // Base case: end of the list
+    }
+    display_bwd_rec(node->nxt); // Recursive call for the next node
+    cout << node->name << ", " << node->id << ", " << node->age << endl;
+}
+
+// Wrapper function to display the list backwards
+void display_bwd() {
+    if (start == NULL) { // If the list is empty
+        cout << "The list is empty; no student data to display." << endl;
+        return;
+    }
+
+    cout << "Student information (Backward):" << endl;
+    display_bwd_rec(start);
+}
+
+// Function to free all allocated memory
+void free_memory() {
+    student* temp;
+    while (start != NULL) {
+        temp = start;
+        start = start->nxt;
+        delete temp;
+    }
+    cout << "Memory cleaned up. Exiting program." << endl;
+}
 
 int main() {
     int ch;
